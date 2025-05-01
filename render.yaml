@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: nurobloom
+    env: python
+    buildCommand: "./build.sh"
+    startCommand: "gunicorn nurobloom.wsgi:application"
+    envVars:
+      - key: DJANGO_SETTINGS_MODULE
+        value: nurobloom.settings
+      - key: SECRET_KEY
+        value: django-insecure-default
+      - key: ALLOWED_HOSTS
+        value: nurobloom.onrender.com

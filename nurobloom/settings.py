@@ -1,12 +1,13 @@
-from pathlib import Path
 import os
+from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = os.environ.get('SECRET_KEY', 'django-insecure-default')
 
 DEBUG = True
-ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS", "*").split(",")
+
+ALLOWED_HOSTS = ['nurobloom1.onrender.com']
 
 INSTALLED_APPS = [
     'django.contrib.admin',

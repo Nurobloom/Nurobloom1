@@ -1,4 +1,4 @@
-from django.http import HttpResponse
+from django.shortcuts import render
 
-def index(request):
-    return HttpResponse("Welcome to NuroBloom!")
+def home(request):
+    return render(request, "home.html")
